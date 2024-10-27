@@ -1,0 +1,152 @@
+/* 1 */
+@keyframes logo {
+    0% {width: 25px; opacity: 0;}
+    100% {width: 475px; opacity: 1;}
+  }
+#logo {
+    animation: logo 5s forwards;
+}
+/* 2 */
+body {
+    font-family: "Poppins", serif;
+    background-color: #f1f1f1;
+    background-image: url("../images/concrete_seamless.png");
+}
+
+/* 3 */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 4 */
+.nav_links {
+    flex-wrap: wrap;
+}
+
+/* 5 */
+a, a:visited {
+    color: blue;
+}
+/* 6 */
+.card > header {
+    background-color: #288088;
+    border: solid 2px #45ADAD;
+    padding: 20px 0;
+    border-radius: 50px 50px 0 0;
+}
+
+/* 7&8 */
+.card {
+    flex-basis: 450px;
+    border-radius: 50px 50px 0 0;
+}
+.pricing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* 9 */
+.gallery img {
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+}
+
+/* 10 */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media screen and (min-width:900px) {
+    /* 11 */
+    header {
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .nav_links {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+    }
+    /* 12 */
+    .card{
+        flex-basis: 275px;
+        height: fit-content;
+    }
+    .pricing{
+        align-items: center;
+    }
+    /* 13 */
+    body > header:first-of-type {
+        position: fixed;
+        width: 100%;
+    }
+    main {
+        padding-top: 100px;
+    }
+}
+
+/* 14 */
+@media all and (prefers-reduced-motion) {
+    #logo {
+        animation: none;
+        width: 475px;
+        opacity: 1;
+    }
+}
+
+@media print {
+    /* 15, 16 */
+    body {
+        font-family: Arial, Helvetica ;
+        background-image: none;
+    }
+
+    /* 17 */
+    nav {
+        display: flex;
+        width: 100%;
+    }
+    .nav_links {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .pricing {
+        align-items: flex-end;
+        width: auto;
+    }
+
+    /* 18 & 19 */
+    .card {
+        flex-basis: 325px;
+        border: 2px solid #45ADDD;
+        height: fit-content;
+    }
+
+    .card > header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .pricing {
+        flex-wrap: nowrap;
+    }
+
+    /* 20 */
+    #gallery, .gallery{
+        display: none;
+    }
+    /* 21 */
+    .card ul li:nth-child(2)::after {
+        content: "\1F44D";
+    }
+}
+
+
